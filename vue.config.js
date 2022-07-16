@@ -9,5 +9,6 @@ module.exports = {
 				additionalData: [...bootstrapSassAbstractsImports, ''].join(';\n')
 			}
 		}
-	}
+	},
+	outputDir : 'docs'
 }
