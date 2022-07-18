@@ -88,4 +88,13 @@ html, body {
 .specialFont {
   font-family: 'Jost', sans-serif;
 }
+
+.customBtnDesign {
+  border: solid rgb(250, 140, 107) 2px;
+  border-radius: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 </style>

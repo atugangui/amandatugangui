@@ -3,9 +3,11 @@
     <div class="row">
       <div class="col">
         <img class="resume" src="@/assets/AmandaTuganguiResume.jpg" />
-        <BIconZoomIn id="zoomBtn" />
-        <button class="btn btn-light" id="downloadBtn">
-          <BIconFilePdf/> DOWNLOAD PDF
+        <button class="btn customBtnDesign" id="zoomBtn">
+          <BIconZoomIn/>
+        </button>
+        <button class="btn customBtnDesign" id="downloadBtn" href="@/assets/AmandaTuganguiResume.pdf" download="AmandaTuganguiResume.pdf">
+          <BIconDownload id="downloadIcon"/> DOWNLOAD
         </button>
       </div>
       <div class="col">
@@ -16,12 +18,12 @@
 </template>
 
 <script>
-import { BIconFilePdf, BIconZoomIn} from 'bootstrap-vue'
+import { BIconDownload, BIconZoomIn} from 'bootstrap-vue'
 
 export default {
   name: 'About',
   components: {
-    BIconFilePdf,
+    BIconDownload,
     BIconZoomIn
   },
 }
@@ -62,15 +64,16 @@ a {
 }
 
 .resume {
-  height: 100%;
-  width: 100%;
+  height: 90%;
+  width: 90%;
   object-fit: contain;
   position:absolute;
+  top:0px;
 }
 
 .mainHeadshot {
-  height: 80%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
   object-fit: contain;
 }
 
@@ -83,30 +86,31 @@ a {
   width: 70%;
 }
 
-#downloadBtn {
-  border: solid red 2px;
-  border-radius: 0px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  position: absolute;
+#downloadBtn, #zoomBtn {
+  display: inline;
   transition: 0.3s;
   opacity: 0.5;
   bottom: 5px;
-  right: 25%;
+  text-align: center;
+  margin-top: auto;
+}
+
+
+#zoomBtn {
+  margin-left: auto;
+}
+
+#downloadBtn {
+  margin-right: auto;
 }
 
 #downloadBtn:hover {opacity: 1}
 
-#zoomBtn {
-  position:absolute;
-  width: 20px;
-  margin-left: auto;
-margin-right: auto;
-left: 0;
-right: 0;
-text-align: center;
+#zoomBtn:hover {opacity: 1}
+
+#downloadIcon {
+  width: 15px;
+  margin: 2px;
 }
 
 </style>
