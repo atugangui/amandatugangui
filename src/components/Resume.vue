@@ -3,6 +3,7 @@
     <div class="row">
       <div class="col">
         <img class="resume" src="@/assets/AmandaTuganguiResume.jpg" />
+        <BIconZoomIn id="zoomBtn" />
         <button class="btn btn-light" id="downloadBtn">
           <BIconFilePdf/> DOWNLOAD PDF
         </button>
@@ -15,16 +16,14 @@
 </template>
 
 <script>
-import { BIconFilePdf} from 'bootstrap-vue'
+import { BIconFilePdf, BIconZoomIn} from 'bootstrap-vue'
 
 export default {
   name: 'About',
   components: {
-    BIconFilePdf
+    BIconFilePdf,
+    BIconZoomIn
   },
-  props: {
-    msg: String
-  }
 }
 </script>
 
@@ -99,5 +98,15 @@ a {
 }
 
 #downloadBtn:hover {opacity: 1}
+
+#zoomBtn {
+  position:absolute;
+  width: 20px;
+  margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+}
 
 </style>
