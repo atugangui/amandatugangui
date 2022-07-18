@@ -3,11 +3,12 @@
     <div class="row">
       <div class="col">
         <img class="resume" src="@/assets/AmandaTuganguiResume.jpg" />
-      </div>
-      <div class="col">
-        <button class="btn btn-light" id="downloadResume">
+        <button class="btn btn-light" id="downloadBtn">
           <BIconFilePdf/> DOWNLOAD PDF
         </button>
+      </div>
+      <div class="col">
+        <img class="mainHeadshot" src="@/assets/rrivphoto-82.jpg"/>
       </div>
     </div>
   </div>
@@ -65,6 +66,13 @@ a {
   height: 100%;
   width: 100%;
   object-fit: contain;
+  position:absolute;
+}
+
+.mainHeadshot {
+  height: 80%;
+  width: 80%;
+  object-fit: contain;
 }
 
 .italic {
@@ -76,12 +84,20 @@ a {
   width: 70%;
 }
 
-#downloadResume {
+#downloadBtn {
   border: solid red 2px;
   border-radius: 0px;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
+  position: absolute;
+  transition: 0.3s;
+  opacity: 0.5;
+  bottom: 5px;
+  right: 25%;
 }
+
+#downloadBtn:hover {opacity: 1}
+
 </style>
