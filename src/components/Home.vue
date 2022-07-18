@@ -2,7 +2,8 @@
   <div class="container">
     <div class="row">
     <div class="col" id="left">
-      <h1 class="homeBio specialFont">Amanda Tugangui is a NYC-based actor, improv-er, and aspiring renaissance woman from California.</h1>
+      <img class="homeSmear" src="@/assets/smear.png"/>
+      <h1 class="homeBio specialFont">Amanda Tugangui is a NYC-based actor, improv-er, and renaissance woman from California.</h1>
     </div>
     <div class="col" id="right">
       <div class="container innerContainer">
@@ -59,24 +60,25 @@ export default {
 }
 
 #left {
-  background-color: red;
   display: flex;
   align-items: center;
 }
 
-#right {
-  background-color: blue;
-}
-
 .homeBio {
-  text-align: left;
+  text-align: center;
+  z-index: 1;
+  position: absolute;
 }
 
-.homeHeadshot {
+.homeHeadshot, .homeSmear {
   vertical-align: unset;
   height: 100%;
   width: 100%;
-  object-fit:cover;
+  object-fit: contain;
+}
+
+.homeSmear {
+  z-index: 0;
 }
 
 .innerRow {
