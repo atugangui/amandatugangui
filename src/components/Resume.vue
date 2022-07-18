@@ -6,8 +6,10 @@
         <button class="btn customBtnDesign" id="zoomBtn">
           <BIconZoomIn/>
         </button>
-        <button class="btn customBtnDesign" id="downloadBtn" href="@/assets/AmandaTuganguiResume.pdf" download="AmandaTuganguiResume.pdf">
+        <button class="btn customBtnDesign" id="downloadBtn">
+          <a  v-bind:href="'/AmandaTuganguiResume.pdf'" download>
           <BIconDownload id="downloadIcon"/> DOWNLOAD
+          </a>
         </button>
       </div>
       <div class="col">
@@ -25,7 +27,7 @@ export default {
   components: {
     BIconDownload,
     BIconZoomIn
-  },
+  }
 }
 </script>
 
@@ -104,7 +106,13 @@ a {
   margin-right: auto;
 }
 
-#downloadBtn:hover {opacity: 1}
+#downloadBtn:hover {
+  opacity: 1;
+}
+
+a:hover {
+  color: #42b983;
+}
 
 #zoomBtn:hover {opacity: 1}
 
