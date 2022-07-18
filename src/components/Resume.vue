@@ -1,12 +1,26 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img class="resume" src="@/assets/AmandaTuganguiResume.jpg" />
+      </div>
+      <div class="col">
+        <button class="btn btn-light" id="downloadResume">
+          <BIconFilePdf/> DOWNLOAD PDF
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import { BIconFilePdf} from 'bootstrap-vue'
+
 export default {
-  name: 'Resume',
+  name: 'About',
+  components: {
+    BIconFilePdf
+  },
   props: {
     msg: String
   }
@@ -15,18 +29,59 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.container {
+  height: 90%;
+}
+
+.row {
+  height: 100%;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
 h3 {
   margin: 40px 0 0;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
+}
+
+.resume {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.italic {
+  font-style: italic;
+}
+
+#bio {
+  text-align: right;
+  width: 70%;
+}
+
+#downloadResume {
+  border: solid red 2px;
+  border-radius: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 </style>
