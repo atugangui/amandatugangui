@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <img class="headshot" src="@/assets/rrivphoto-82.jpg" />
+        <img class="headshot" src="@/assets/DSC_8770-Edit.jpg" />
       </div>
       <div class="col">
         <p class="specialFont" id="bio">
