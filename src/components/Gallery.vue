@@ -51,13 +51,18 @@ export default {
             prodCo: 'The Hollywood Majestic'
           },
           {
-            showName: 'SWEENEY TODD',
-            imgSrc: 'SweeneyToddClose',
-            prodCo: 'Lewis & Clark College'
+            showName: 'WAIT UNTIL DARK',
+            imgSrc: 'WaitUntilDark',
+            prodCo: 'Theatre Palisades'
           },
           {
             showName: "ANTIGONICK",
             imgSrc: 'Antigonick',
+            prodCo: 'Lewis & Clark College'
+          },
+          {
+            showName: 'SWEENEY TODD',
+            imgSrc: 'SweeneyToddClose',
             prodCo: 'Lewis & Clark College'
           }
       ]

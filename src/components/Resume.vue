@@ -8,7 +8,7 @@
         </button>
         <button class="btn customBtnDesign" id="downloadBtn">
           <a  v-bind:href="'/AmandaTuganguiResume.pdf'" download>
-          <BIconDownload id="downloadIcon"/> DOWNLOAD
+          <BIconDownload id="downloadIcon"/> download
           </a>
         </button>
       </div>
@@ -95,6 +95,7 @@ a {
   bottom: 5px;
   text-align: center;
   margin-top: auto;
+  color: #42b983;
 }
 
 
