@@ -17,7 +17,7 @@
       </div>
       <div class="row innerRow">
       <div class="quads" id="three">
-        <img class="homeHeadshot" src="@/assets/rrivphoto-182.jpg"/>
+        <img class="homeHeadshot" src="@/assets/pic3.jpg"/>
       </div>
       <div class="quads" id="four">
         <img class="homeHeadshot" src="@/assets/rrivphoto-95.jpg"/>

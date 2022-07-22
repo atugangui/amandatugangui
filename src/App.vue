@@ -96,4 +96,9 @@ html, body {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+
+a:hover {
+  color: #42b983;
+}
 </style>

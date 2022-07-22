@@ -3,9 +3,6 @@
     <div class="row">
       <div class="col">
         <img class="resume" src="@/assets/AmandaTuganguiResume.jpg" />
-        <button class="btn customBtnDesign" id="zoomBtn">
-          <BIconZoomIn/>
-        </button>
         <button class="btn customBtnDesign" id="downloadBtn">
           <a  v-bind:href="'/AmandaTuganguiResume.pdf'" download>
           <BIconDownload id="downloadIcon"/> download
@@ -20,13 +17,12 @@
 </template>
 
 <script>
-import { BIconDownload, BIconZoomIn} from 'bootstrap-vue'
+import { BIconDownload} from 'bootstrap-vue'
 
 export default {
   name: 'About',
   components: {
     BIconDownload,
-    BIconZoomIn
   }
 }
 </script>
@@ -98,21 +94,13 @@ a {
   color: #42b983;
 }
 
-
-#zoomBtn {
-  margin-left: auto;
-}
-
 #downloadBtn {
   margin-right: auto;
+  margin-left: auto;
 }
 
 #downloadBtn:hover {
   opacity: 1;
-}
-
-a:hover {
-  color: #42b983;
 }
 
 #zoomBtn:hover {opacity: 1}

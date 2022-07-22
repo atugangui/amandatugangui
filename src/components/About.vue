@@ -13,11 +13,11 @@
           <br />
           When she's not on stage, Amanda is intensely curious about everything. 
           <br />
-          Like, what is it like to <a href="https://www.youtube.com/watch?v=jGH_rhOWm0s">play harp?</a> (Hard.)
+          Like, what is it like to <a href="https://www.youtube.com/watch?v=jGH_rhOWm0s" target="_blank">play harp?</a> (Hard.)
           <br />
-          Or to write a <a href="https://tugangui.substack.com/">travel blog?</a> (Cathartic.)
+          Or to write a <a href="https://tugangui.substack.com/" target="_blank">travel blog?</a> (Cathartic.)
           <br />
-          To cook Korean food? (Delicious.)
+          To <a href="https://imgur.com/a/esCVBuY" target="_blank">grow bok choy?</a> (Delicious.)
           <br />
           <br />
           With a background as a programmer (she coded this website herself!),

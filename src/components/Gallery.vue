@@ -85,7 +85,7 @@ export default {
 .galleryImages,
 iframe {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 h3 {
@@ -109,7 +109,7 @@ a {
 .prodNameOnPic {
   font-size: 8pt;
   position: absolute;
-  bottom: -10px;
+  bottom: -13px;
   right: 5px;
   text-align: right;
   color: white;
