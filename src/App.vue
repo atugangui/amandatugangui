@@ -94,6 +94,10 @@ html, body {
   padding-bottom: 10px;
 }
 
+a {
+  color: #42b983;
+}
+
 a:hover {
   color: #42b983;
 }

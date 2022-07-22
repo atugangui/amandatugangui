@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { BIconDownload} from 'bootstrap-vue'
+import { BIconDownload } from 'bootstrap-vue'
 
 export default {
   name: 'Resume',
@@ -43,20 +43,6 @@ export default {
   height: 100%;
 }
 
-h3 {
-  margin: 40px 0 0;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
 a {
   color: #42b983;
 }
@@ -69,16 +55,7 @@ a {
   top:0px;
 }
 
-.italic {
-  font-style: italic;
-}
-
-#bio {
-  text-align: right;
-  width: 70%;
-}
-
-#downloadBtn, #zoomBtn {
+#downloadBtn {
   display: inline;
   transition: 0.3s;
   opacity: 0.5;
@@ -95,13 +72,6 @@ a {
 
 #downloadBtn:hover {
   opacity: 1;
-}
-
-#zoomBtn:hover {opacity: 1}
-
-#downloadIcon {
-  width: 15px;
-  margin: 2px;
 }
 
 </style>

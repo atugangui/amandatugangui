@@ -55,10 +55,6 @@ export default {
   height: 100%;
 }
 
-a {
-  color: #42b983;
-}
-
 .italic {
   font-style: italic;
 }
