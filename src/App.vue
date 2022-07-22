@@ -59,7 +59,6 @@ export default {
 
 <style lang="scss">
 @import "~@/assets/scss/vendors/bootstrap-vue/index";
-@import "~@/assets/scss/vendors/bootstrap-vue/index";
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 
 html, body {
