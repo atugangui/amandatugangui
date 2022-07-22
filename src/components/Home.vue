@@ -2,25 +2,25 @@
   <div class="container">
     <div class="row">
     <div class="col" id="left">
-      <img class="homeSmear" src="@/assets/smear.png"/>
-      <h1 class="homeBio specialFont">Amanda Tugangui is a NYC-based actor, improv-er, and renaissance woman from California.</h1>
+      <img class="nonGalleryImage" id="smearPic" src="@/assets/smear.png"/>
+      <h1 class="homeBio">Amanda Tugangui is a NYC-based actor, improv-er, and renaissance woman from California.</h1>
     </div>
     <div class="col" id="right">
       <div class="container innerContainer">
         <div class="row innerRow">
       <div class="quads" id="one">
-        <img class="homeHeadshot" src="@/assets/rrivphoto-111.jpg"/>
+        <img class="nonGalleryImage" src="@/assets/rrivphoto-111.jpg"/>
       </div>
       <div class="quads" id="two">
-        <img class="homeHeadshot" src="@/assets/rrivphoto-213.jpg"/>
+        <img class="nonGalleryImage" src="@/assets/rrivphoto-213.jpg"/>
       </div>
       </div>
       <div class="row innerRow">
       <div class="quads" id="three">
-        <img class="homeHeadshot" src="@/assets/pic3.jpg"/>
+        <img class="nonGalleryImage" src="@/assets/pic3.jpg"/>
       </div>
       <div class="quads" id="four">
-        <img class="homeHeadshot" src="@/assets/rrivphoto-95.jpg"/>
+        <img class="nonGalleryImage" src="@/assets/rrivphoto-95.jpg"/>
       </div>
       </div>
       </div>
@@ -67,14 +67,7 @@ export default {
   position: absolute;
 }
 
-.homeHeadshot, .homeSmear {
-  vertical-align: unset;
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-}
-
-.homeSmear {
+#smearPic {
   z-index: 0;
 }
 

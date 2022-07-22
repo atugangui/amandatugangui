@@ -10,7 +10,7 @@
         </button>
       </div>
       <div class="col">
-        <img class="mainHeadshot" src="@/assets/rrivphoto-82.jpg"/>
+        <img class="nonGalleryImage" src="@/assets/rrivphoto-82.jpg"/>
       </div>
     </div>
   </div>
@@ -67,12 +67,6 @@ a {
   object-fit: contain;
   position:absolute;
   top:0px;
-}
-
-.mainHeadshot {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
 }
 
 .italic {

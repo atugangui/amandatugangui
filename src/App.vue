@@ -85,10 +85,6 @@ html, body {
   margin-left: auto;
 }
 
-.specialFont {
-  font-family: 'Jost', sans-serif;
-}
-
 .customBtnDesign {
   border: solid rgb(250, 140, 107) 2px;
   border-radius: 0px;
@@ -98,8 +94,14 @@ html, body {
   padding-bottom: 10px;
 }
 
-
 a:hover {
   color: #42b983;
+}
+
+.nonGalleryImage{
+  vertical-align: unset;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 </style>

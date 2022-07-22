@@ -2,10 +2,10 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <img class="headshot" src="@/assets/DSC_8770-Edit.jpg" />
+        <img class="nonGalleryImage" src="@/assets/DSC_8770-Edit.jpg" />
       </div>
       <div class="col">
-        <p class="specialFont" id="bio">
+        <p id="bio">
           Having recently relocated from Los Angeles, Amanda was just 
           nominated for an acting award from Theatre Palisades for her role as 
           Gloria in <span class="italic">Wait Until Dark.</span>
@@ -55,28 +55,8 @@ export default {
   height: 100%;
 }
 
-h3 {
-  margin: 40px 0 0;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
 a {
   color: #42b983;
-}
-
-.headshot {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
 }
 
 .italic {
