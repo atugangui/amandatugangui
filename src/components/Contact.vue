@@ -30,7 +30,7 @@
 import emailjs from 'emailjs-com';
 
 export default {
-  name: 'ContactUs',
+  name: 'Contact',
   data() {
     return {
       name: '',

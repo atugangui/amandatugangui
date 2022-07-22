@@ -35,10 +35,7 @@
 
 <script>
 export default {
-  name: 'About',
-  props: {
-    msg: String
-  }
+  name: 'About'
 }
 </script>
 

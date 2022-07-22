@@ -20,7 +20,7 @@
 import { BIconDownload} from 'bootstrap-vue'
 
 export default {
-  name: 'About',
+  name: 'Resume',
   components: {
     BIconDownload,
   }

@@ -24,12 +24,13 @@
     </nav>
     <!-- /Top navbar-->
 
-    <!--<img alt="Vue logo" src="./assets/logo.png">-->
-    <Home v-if="view === 'home'" msg="Welcome to Your Vue.js App" />
-    <About v-if="view === 'about'" msg="About"></About>
-    <Resume v-if="view === 'resume'" msg="Resume"></Resume>
-    <Contact v-if="view === 'contact'" msg="Contact"></Contact>
-    <Gallery v-if="view === 'gallery'" msg="Gallery"/>
+    <!-- Main views -->
+    <Home v-if="view === 'home'"/>
+    <About v-if="view === 'about'"/>
+    <Resume v-if="view === 'resume'"/>
+    <Contact v-if="view === 'contact'"/>
+    <Gallery v-if="view === 'gallery'"/>
+    <!-- /Main views -->
   </div>
 </template>
 
