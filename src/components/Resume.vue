@@ -4,7 +4,7 @@
       <div class="col">
         <img class="resume" src="@/assets/AmandaTuganguiResume.jpg" />
         <button class="btn customBtnDesign" id="downloadBtn">
-          <a  v-bind:href="'/AmandaTuganguiResume.pdf'" download>
+          <a v-bind:href="'AmandaTuganguiResume.pdf'" download>
           <BIconDownload id="downloadIcon"/> download
           </a>
         </button>
