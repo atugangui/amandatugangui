@@ -42,8 +42,8 @@ export default {
     sendEmail(e) {
       try {
         // TO DO: ADD VARIABLES AS GITHUB KEYS
-        emailjs.sendForm('service_u6ie8iz', 'template_9jskeh6', e.target,
-          '25pK8EaCBXSYEZdoh', {
+        emailjs.sendForm(process.env.VUE_APP_SERVICE_ID, process.env.VUE_APP_TEMPLATE_ID, e.target,
+          process.env.VUE_APP_USER_ID, {
           name: this.name,
           email: this.email,
           message: this.message
