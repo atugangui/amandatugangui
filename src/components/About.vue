@@ -63,4 +63,10 @@ export default {
   text-align: right;
   width: 70%;
 }
+
+@media (min-width: 1366px) {
+  #bio {
+    width: 100%;
+  }
+}
 </style>

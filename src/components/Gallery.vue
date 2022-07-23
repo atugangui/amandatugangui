@@ -100,4 +100,10 @@ iframe {
 .prodCoText{
   font-style: italic;
 }
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1200px;
+  }
+}
 </style>

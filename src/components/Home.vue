@@ -7,21 +7,13 @@
       </div>
       <div class="col" id="right">
         <div class="container innerContainer">
-          <div class="row innerRow">
-            <div class="quads">
-              <img class="nonGalleryImage" src="@/assets/rrivphoto-111.jpg" />
-            </div>
-            <div class="quads">
-              <img class="nonGalleryImage" src="@/assets/rrivphoto-213.jpg" />
-            </div>
+          <div class="row innerRow" id="topPhotoRow">
+            <img class="quads nonGalleryImage leftHeadshot" src="@/assets/rrivphoto-111.jpg" />
+            <img class="quads nonGalleryImage rightHeadshot" src="@/assets/rrivphoto-213.jpg" />
           </div>
           <div class="row innerRow">
-            <div class="quads">
-              <img class="nonGalleryImage" src="@/assets/pic3.jpg" />
-            </div>
-            <div class="quads">
-              <img class="nonGalleryImage" src="@/assets/rrivphoto-95.jpg" />
-            </div>
+            <img class="quads nonGalleryImage leftHeadshot" src="@/assets/pic3.jpg" />
+            <img class="quads nonGalleryImage rightHeadshot" src="@/assets/rrivphoto-95.jpg" />
           </div>
         </div>
       </div>
@@ -72,5 +64,19 @@ export default {
 
 .innerRow {
   height: 50%;
+}
+
+#topPhotoRow {
+  margin-bottom: 2%;
+}
+
+.leftHeadshot {
+  margin-left:auto;
+  margin-right: 6%;
+}
+
+.rightHeadshot {
+  margin-right: auto;
+  margin-left:6%;
 }
 </style>

@@ -25,11 +25,11 @@
     <!-- /Top navbar-->
 
     <!-- Main views -->
-    <Home v-if="view === 'home'"/>
-    <About v-if="view === 'about'"/>
-    <Resume v-if="view === 'resume'"/>
-    <Contact v-if="view === 'contact'"/>
-    <Gallery v-if="view === 'gallery'"/>
+    <Home v-if="view === 'home'" />
+    <About v-if="view === 'about'" />
+    <Resume v-if="view === 'resume'" />
+    <Contact v-if="view === 'contact'" />
+    <Gallery v-if="view === 'gallery'" />
     <!-- /Main views -->
   </div>
 </template>
@@ -62,7 +62,8 @@ export default {
 @import "~@/assets/scss/vendors/bootstrap-vue/index";
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 
-html, body {
+html,
+body {
   min-height: 100%;
   height: 100%;
   font-family: 'Jost', sans-serif;
@@ -77,9 +78,9 @@ html, body {
   height: 100%;
 }
 
-.navbar {
+/*.navbar {
   height: 10vh;
-}
+}*/
 
 #navbarSupportedContent {
   margin-left: auto;
@@ -102,10 +103,30 @@ a:hover {
   color: #42b983;
 }
 
-.nonGalleryImage{
+.nonGalleryImage {
   vertical-align: unset;
   height: 100%;
   width: 100%;
   object-fit: contain;
 }
+
+
+@media (min-width: 1366px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1828px;
+  }
+  .navbar {
+    font-size: 1.5rem;
+  }
+  body {
+    font-size: 1.5rem;
+  }
+}
+
 </style>
