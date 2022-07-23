@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col" id="left">
         <img class="nonGalleryImage" id="smearPic" src="@/assets/smear.png" />
-        <h1 class="homeBio">Amanda Tugangui is a NYC-based actor, improv-er, and renaissance woman from California.</h1>
+        <h1 class="homeBio">Amanda Tugangui is an NYC-based actor, improv-er, and renaissance woman from California.</h1>
       </div>
       <div class="col" id="right">
         <div class="container innerContainer">
@@ -78,5 +78,17 @@ export default {
 .rightHeadshot {
   margin-right: auto;
   margin-left:6%;
+}
+
+@media (min-height: 721px) {
+  .quads {
+    width: 44%;
+  }
+}
+
+@media (min-height: 1080px){
+  .quads {
+    width: 33%;
+  }
 }
 </style>
