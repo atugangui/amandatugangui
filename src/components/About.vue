@@ -6,6 +6,7 @@
           class="nonGalleryImage"
           :src=largePortrait
           :src-placeholder=tinyPortrait
+          alt="Candid Amanda Tugangui"
         />
       </div>
       <div class="col">

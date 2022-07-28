@@ -66,7 +66,7 @@ export default {
             imgSrc: 'https://www.youtube.com/embed/4JU76lgOYbo',
             prodCo: 'd. Director Name',
             largeImg: null,
-            tinyImg: null
+            tinyImg: null,
           },
           {
             showName: "LOVE AND INFORMATION",

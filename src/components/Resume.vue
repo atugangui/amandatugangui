@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <v-lazy-image class="resume" :src=largeResume :src-placeholder=tinyResume />
+        <v-lazy-image class="resume" :src=largeResume :src-placeholder=tinyResume alt="Amanda Tugangui's Resume"/>
         <button class="btn customBtnDesign" id="downloadBtn">
           <a v-bind:href="'AmandaTuganguiResume.pdf'" download>
           <BIconDownload id="downloadIcon"/> download
@@ -10,7 +10,7 @@
         </button>
       </div>
       <div class="col">
-        <v-lazy-image class="nonGalleryImage" :src=largeHeadshot :src-placeholder=tinyHeadshot />
+        <v-lazy-image class="nonGalleryImage" :src=largeHeadshot :src-placeholder=tinyHeadshot alt="Amanda Tugangui's Main Headshot"/>
       </div>
     </div>
   </div>

@@ -2,19 +2,19 @@
   <div class="container">
     <div class="row">
       <div class="col" id="left">
-        <img class="nonGalleryImage" id="smearPic" src="@/assets/home/PaintSmear.png" />
+        <img class="nonGalleryImage" id="smearPic" src="@/assets/home/PaintSmear.png" alt=null/>
         <h1 class="homeBio">Amanda Tugangui is an NYC-based actor, improv-er, and renaissance woman from California.
         </h1>
       </div>
       <div class="col" id="right">
         <div class="container innerContainer">
           <div class="row innerRow" id="topPhotoRow">
-            <v-lazy-image class="quads nonGalleryImage leftHeadshot" :src=largeBlue :src-placeholder=tinyBlue />
-            <v-lazy-image class="quads nonGalleryImage rightHeadshot" :src=largeGreen :src-placeholder=tinyGreen />
+            <v-lazy-image class="quads nonGalleryImage leftHeadshot" :src=largeBlue :src-placeholder=tinyBlue alt="Smiling Amanda Tugangui" />
+            <v-lazy-image class="quads nonGalleryImage rightHeadshot" :src=largeGreen :src-placeholder=tinyGreen alt="Smirking Amanda Tugangui" />
           </div>
           <div class="row innerRow">
-            <v-lazy-image class="quads nonGalleryImage leftHeadshot" :src=largeTan :src-placeholder=tinyTan />
-            <v-lazy-image class="quads nonGalleryImage rightHeadshot" :src=largePurple :src-placeholder=tinyPurple />
+            <v-lazy-image class="quads nonGalleryImage leftHeadshot" :src=largeTan :src-placeholder=tinyTan alt="Dramatic Amanda Tugangui"/>
+            <v-lazy-image class="quads nonGalleryImage rightHeadshot" :src=largePurple :src-placeholder=tinyPurple alt="Laughing Amanda Tugangui" />
           </div>
         </div>
       </div>
