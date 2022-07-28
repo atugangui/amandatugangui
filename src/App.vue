@@ -48,7 +48,7 @@ export default {
     About,
     Resume,
     Contact,
-    Gallery
+    Gallery,
   },
   data() {
     return {
@@ -129,4 +129,13 @@ a:hover {
   }
 }
 
+.v-lazy-image {
+  opacity: 0;
+  transform: translate3d(0, 50%, 0);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.v-lazy-image-loaded {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
 </style>

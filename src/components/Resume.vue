@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <img class="resume" src="@/assets/AmandaTuganguiResume.jpg" />
+        <v-lazy-image class="resume" :src=largeResume :src-placeholder=tinyResume />
         <button class="btn customBtnDesign" id="downloadBtn">
           <a v-bind:href="'AmandaTuganguiResume.pdf'" download>
           <BIconDownload id="downloadIcon"/> download
@@ -10,7 +10,7 @@
         </button>
       </div>
       <div class="col">
-        <img class="nonGalleryImage" src="@/assets/rrivphoto-82.jpg"/>
+        <v-lazy-image class="nonGalleryImage" :src=largeHeadshot :src-placeholder=tinyHeadshot />
       </div>
     </div>
   </div>
@@ -18,11 +18,32 @@
 
 <script>
 import { BIconDownload } from 'bootstrap-vue'
+import VLazyImage from "v-lazy-image/v2"
+import largeResume from "../assets/resume/Resume.jpg"
+import largeHeadshot from "../assets/resume/MainHeadshot.jpg"
+import tinyResume from "../assets/tiny/resume/Resume.jpg"
+import tinyHeadshot from "../assets/tiny/resume/MainHeadshot.jpg"
+
 
 export default {
   name: 'Resume',
   components: {
     BIconDownload,
+    VLazyImage
+  },
+  computed: {
+    largeResume() {
+      return largeResume;
+    },
+    largeHeadshot() {
+      return largeHeadshot;
+    },
+    tinyResume() {
+      return tinyResume;
+    },
+    tinyHeadshot() {
+      return tinyHeadshot;
+    },
   }
 }
 </script>

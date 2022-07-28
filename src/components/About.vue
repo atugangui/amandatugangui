@@ -2,7 +2,11 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <img class="nonGalleryImage" src="@/assets/DSC_8770-Edit.jpg" />
+        <v-lazy-image
+          class="nonGalleryImage"
+          :src=largePortrait
+          :src-placeholder=tinyPortrait
+        />
       </div>
       <div class="col">
         <p id="bio">
@@ -34,8 +38,24 @@
 </template>
 
 <script>
+import VLazyImage from "v-lazy-image/v2";
+
+import largePortrait from "../assets/about/Portrait.jpg";
+import tinyPortrait from "../assets/tiny/about/Portrait.jpg";
+
 export default {
-  name: 'About'
+  name: 'About',
+  components: {
+    VLazyImage
+  },
+  computed: {
+    largePortrait() {
+      return largePortrait;
+    },
+    tinyPortrait() {
+      return tinyPortrait;
+    }
+  }
 }
 </script>
 
