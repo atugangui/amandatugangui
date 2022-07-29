@@ -11,5 +11,4 @@ module.exports = {
 		}
 	},
 	outputDir : 'dist',
-	publicPath: '/amandatugangui/'
 }
