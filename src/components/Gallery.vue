@@ -2,16 +2,19 @@
   <div class="container">
     <stack :column-min-width="300" :gutter-width="15" :gutter-height="15" monitor-images-loaded>
       <StackItem v-for="(item, i) in items" :key="i">
-          <iframe v-if="i == 1" :src="item.imgSrc">
+        <template v-if="item.mediaType == 2">
+          <iframe :src="item.imgSrc">
           </iframe>
+          </template>
+          <template v-else>
           <v-lazy-image
-            v-else
             class="galleryImages"
             :src=getLargeImgUrl(item)
             :src-placeholder=getTinyImgUrl(item)
             v-bind:alt="item.showName"
           />
           <p class="prodNameOnPic">{{item.showName}}</p>
+          </template>
           <!--<br/><span class="prodCoText">{{item.prodCo}}</span>-->
       </StackItem>
       <StackItem>
@@ -59,7 +62,16 @@ export default {
             imgSrc: 'SweeneyTodd',
             prodCo: 'Lewis & Clark College',
             largeImg: largeSweeney,
-            tinyImg: tinySweeney
+            tinyImg: tinySweeney,
+            mediaType: 1
+          },
+          {
+            showName: 'HEART OF GOD',
+            imgSrc: 'https://www.youtube.com/embed/qbPxZPsjhbg',
+            prodCo: 'd. Director Name',
+            largeImg: null,
+            tinyImg: null,
+            mediaType: 2
           },
           {
             showName: "DENNY'S",
@@ -67,41 +79,47 @@ export default {
             prodCo: 'd. Director Name',
             largeImg: null,
             tinyImg: null,
-          },
-          {
-            showName: "LOVE AND INFORMATION",
-            imgSrc: 'LoveAndInfo',
-            prodCo: 'Lewis & Clark College',
-            largeImg: largeLove,
-            tinyImg: tinyLove
+            mediaType: 2
           },
           {
             showName: "AVENUE Q",
             imgSrc: 'aveQWedding',
             prodCo: 'The Hollywood Majestic',
             largeImg: largeWedding,
-            tinyImg: tinyWedding
+            tinyImg: tinyWedding,
+            mediaType: 1
+          },
+          {
+            showName: "LOVE AND INFORMATION",
+            imgSrc: 'LoveAndInfo',
+            prodCo: 'Lewis & Clark College',
+            largeImg: largeLove,
+            tinyImg: tinyLove,
+            mediaType: 1
           },
           {
             showName: 'WAIT UNTIL DARK',
             imgSrc: 'WaitUntilDark',
             prodCo: 'Theatre Palisades',
             largeImg: largeWait,
-            tinyImg: tinyWait
+            tinyImg: tinyWait,
+            mediaType: 1
           },
           {
             showName: "ANTIGONICK",
             imgSrc: 'Antigonick',
             prodCo: 'Lewis & Clark College',
             largeImg: largeAntigonick,
-            tinyImg: tinyAntigonick
+            tinyImg: tinyAntigonick,
+            mediaType: 1
           },
           {
             showName: 'SWEENEY TODD',
             imgSrc: 'SweeneyToddClose',
             prodCo: 'Lewis & Clark College',
             largeImg: largeSweeney2,
-            tinyImg: tinySweeney2
+            tinyImg: tinySweeney2,
+            mediaType: 1
           }
       ]
     }

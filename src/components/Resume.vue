@@ -1,18 +1,40 @@
 <template>
   <div class="container">
-    <div class="row">
-      <div class="col">
-        <v-lazy-image class="resume" :src=largeResume :src-placeholder=tinyResume alt="Amanda Tugangui's Resume"/>
-        <button class="btn customBtnDesign" id="downloadBtn">
-          <a v-bind:href="'AmandaTuganguiResume.pdf'" download>
-          <BIconDownload id="downloadIcon"/> download
-          </a>
-        </button>
+    <template v-if="isMobile">
+      <div class="row">
+        <div class="col-12">
+          <button class="btn customBtnDesign" id="downloadBtn">
+            <a v-bind:href="'AmandaTuganguiResume.pdf'" download>
+              <BIconDownload id="downloadIcon" /> download
+            </a>
+          </button>
+        </div>
+        <div class="col-12">
+          <v-lazy-image class="resume" :src=largeResume :src-placeholder=tinyResume alt="Amanda Tugangui's Resume" />
+        </div>
+        <div class="col-12">
+          <v-lazy-image class="nonGalleryImage" :src=largeHeadshot :src-placeholder=tinyHeadshot
+            alt="Amanda Tugangui's Main Headshot" />
+        </div>
+        </div>
+    </template>
+    <template v-else>
+      <div class="row">
+
+        <div class="col">
+          <v-lazy-image class="resume" :src=largeResume :src-placeholder=tinyResume alt="Amanda Tugangui's Resume" />
+          <button class="btn customBtnDesign" id="downloadBtn">
+            <a v-bind:href="'AmandaTuganguiResume.pdf'" download>
+              <BIconDownload id="downloadIcon" /> download
+            </a>
+          </button>
+        </div>
+        <div class="col">
+          <v-lazy-image class="nonGalleryImage" :src=largeHeadshot :src-placeholder=tinyHeadshot
+            alt="Amanda Tugangui's Main Headshot" />
+        </div>
       </div>
-      <div class="col">
-        <v-lazy-image class="nonGalleryImage" :src=largeHeadshot :src-placeholder=tinyHeadshot alt="Amanda Tugangui's Main Headshot"/>
-      </div>
-    </div>
+    </template>
   </div>
 </template>
 
@@ -31,6 +53,11 @@ export default {
     BIconDownload,
     VLazyImage
   },
+  data() {
+    return {
+      isMobile: false
+    }
+  },
   computed: {
     largeResume() {
       return largeResume;
@@ -44,6 +71,15 @@ export default {
     tinyHeadshot() {
       return tinyHeadshot;
     },
+  },
+  mounted() {
+    this.onResize()
+    window.addEventListener('resize', this.onResize, { passive: true })
+  },
+  methods: {
+    onResize() {
+      this.isMobile = window.innerWidth < 900
+    }
   }
 }
 </script>
@@ -72,8 +108,8 @@ a {
   height: 90%;
   width: 90%;
   object-fit: contain;
-  position:absolute;
-  top:0px;
+  position: absolute;
+  top: 0px;
 }
 
 #downloadBtn {
@@ -95,4 +131,9 @@ a {
   opacity: 1;
 }
 
+@media (max-width: 900px) {
+  .resume {
+    position: unset;
+  }
+}
 </style>

@@ -1,12 +1,12 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col" id="left">
+      <div class="col" v-bind:class="{ 'col-12': isMobile}" id="left">
         <img class="nonGalleryImage" id="smearPic" src="@/assets/home/PaintSmear.png" alt=null/>
         <h1 class="homeBio">Amanda Tugangui is an NYC-based actor, improv-er, and renaissance woman from California.
         </h1>
       </div>
-      <div class="col" id="right">
+      <div class="col" v-bind:class="{ 'col-12': isMobile}" id="right">
         <div class="container innerContainer">
           <div class="row innerRow" id="topPhotoRow">
             <v-lazy-image class="quads nonGalleryImage leftHeadshot" :src=largeBlue :src-placeholder=tinyBlue alt="Smiling Amanda Tugangui" />
@@ -40,6 +40,11 @@ export default {
   components: {
     VLazyImage
   },
+  data() {
+    return {
+      isMobile: false
+    }
+  },
   computed: {
     largeBlue() {
       return largeBlue;
@@ -66,6 +71,15 @@ export default {
       return tinyPurple;
     }
   },
+  mounted() {
+    this.onResize()
+    window.addEventListener('resize', this.onResize, { passive: true })
+  },
+  methods: {
+    onResize() {
+      this.isMobile = window.innerWidth < 900
+    }
+  }
 }
 </script>
 

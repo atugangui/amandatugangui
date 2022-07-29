@@ -4,11 +4,6 @@
       <template v-if="isMobile">
       <div class="col-12">
           <p id="bio">
-            Having recently relocated from Los Angeles, Amanda was just
-            nominated for an acting award from Theatre Palisades for her role as
-            Gloria in <span class="italic">Wait Until Dark.</span>
-            <br />
-            <br />
             When she's not on stage, Amanda is intensely curious about everything.
             <br />
             Like, what is it like to <a href="https://www.youtube.com/watch?v=jGH_rhOWm0s" target="_blank">play
@@ -41,11 +36,6 @@
         </div>
         <div class="col">
           <p id="bio">
-            Having recently relocated from Los Angeles, Amanda was just
-            nominated for an acting award from Theatre Palisades for her role as
-            Gloria in <span class="italic">Wait Until Dark.</span>
-            <br />
-            <br />
             When she's not on stage, Amanda is intensely curious about everything.
             <br />
             Like, what is it like to <a href="https://www.youtube.com/watch?v=jGH_rhOWm0s" target="_blank">play
