@@ -16,7 +16,6 @@ jobs:
         VUE_APP_SERVICE_ID: ${{ secrets.SERVICE_ID }}
         VUE_APP_TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
         VUE_APP_USER_ID: ${{ secrets.USER_ID }}
-  sitemap:
     name: generate-sitemap
     uses: cicirello/generate-sitemap@v1.8.3
 
