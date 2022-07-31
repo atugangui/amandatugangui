@@ -16,9 +16,29 @@ jobs:
         VUE_APP_SERVICE_ID: ${{ secrets.SERVICE_ID }}
         VUE_APP_TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
         VUE_APP_USER_ID: ${{ secrets.USER_ID }}
-  generate_sitemap:
+  sitemap_job:
     runs-on: ubuntu-latest
-    name: generate-sitemap
+    name: Generate a sitemap
+
     steps:
-    - uses: cicirello/generate-sitemap@v1.8.3
+    - name: Checkout the repo
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0 
+
+    - name: Generate the sitemap
+      id: sitemap
+      uses: cicirello/generate-sitemap@v1
+      with:
+        base-url-path: https://amandatugangui.com/
+
+    - name: Output stats
+      run: |
+        echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
+        echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
+  
+
+      echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
+
+
 
