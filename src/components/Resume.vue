@@ -8,6 +8,9 @@
               <BIconDownload id="downloadIcon" /> download
             </a>
           </button>
+          <a id="aaBtn" href="https://resumes.actorsaccess.com/amandatugangui">
+            <img src="../assets/resume/aa.png"/>
+          </a>
         </div>
         <div class="col-12">
           <v-lazy-image class="resume" :src=largeResume :src-placeholder=tinyResume alt="Amanda Tugangui's Resume" />
@@ -28,6 +31,9 @@
               <BIconDownload id="downloadIcon" /> download
             </a>
           </button>
+          <a id="aaBtn" href="https://resumes.actorsaccess.com/amandatugangui">
+            <img src="../assets/resume/aa.png"/>
+          </a>
         </div>
         <div class="col">
           <v-lazy-image class="nonGalleryImage" :src=largeHeadshot :src-placeholder=tinyHeadshot
@@ -106,28 +112,42 @@ a {
   top: 0px;
 }
 
-#downloadBtn {
+#downloadBtn, #aaBtn {
   display: inline;
   transition: 0.3s;
   opacity: 0.5;
   bottom: 5px;
   text-align: center;
   margin-top: auto;
-  color: #42b983;
+  margin-left: auto;
 }
 
 #downloadBtn {
   margin-right: auto;
-  margin-left: auto;
+  color: #42b983;
 }
 
 #downloadBtn:hover {
   opacity: 1;
 }
 
+#aaBtn:hover {
+  opacity: 1;
+}
+
+#aaBtn > img {
+  width: 50%;
+  background: #91a391;
+}
+
 @media (max-width: 900px) {
   .resume {
     position: unset;
+  }
+
+  #aaBtn > img {
+    width: 40%;
+    margin: 10px;
   }
 }
 </style>

@@ -31,11 +31,11 @@
             <li class="nav-item" v-bind:class="{ active: view == 'gallery' }">
               <a class="nav-link" v-on:click="view = 'gallery'">gallery</a>
             </li>
-            <li class="nav-item" v-bind:class="{ active: view == 'about' }">
-              <a class="nav-link" v-on:click="view = 'about'">about</a>
-            </li>
             <li class="nav-item" v-bind:class="{ active: view == 'resume' }">
               <a class="nav-link" v-on:click="view = 'resume'">resume</a>
+            </li>
+            <li class="nav-item" v-bind:class="{ active: view == 'about' }">
+              <a class="nav-link" v-on:click="view = 'about'">about</a>
             </li>
             <li class="nav-item" v-bind:class="{ active: view == 'contact' }">
               <a class="nav-link" v-on:click="view = 'contact'">contact</a>
