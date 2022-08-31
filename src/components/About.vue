@@ -107,12 +107,6 @@ export default {
   height: 100%;
 }
 
-.col {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
 .italic {
   font-style: italic;
 }

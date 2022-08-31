@@ -1,12 +1,26 @@
 <template>
   <div class="container">
+    <template v-if="isMobile">
+      <div class="row">
+        <div class="col-12" style="height:50%">
+          <v-lazy-image class="nonGalleryImage" :src=portrait :src-placeholder=tinyHeadshot
+            alt="Amanda Tugangui's Main Headshot" />
+        </div>
+        <div class="col-12" id="left" style="height:50%">
+          <img class="nonGalleryImage" id="smearPic" src="@/assets/home/Circles.png" alt=null />
+          <h1 class="homeBio">Amanda Tugangui is an NYC-based actor, improv-er, and renaissance woman from California.
+          </h1>
+        </div>
+      </div>
+    </template>
     <div class="row">
-      <div class="col" v-bind:class="{ 'col-12': isMobile}" id="left">
-        <img class="nonGalleryImage" id="smearPic" src="@/assets/home/GreenCircle.png" alt=null/>
+      <!--<div class="col" v-bind:class="{ 'col-12': isMobile}" id="left">-->
+      <div class="col" id="left">
+        <img class="nonGalleryImage" id="smearPic" src="@/assets/home/Circles.png" alt=null />
         <h1 class="homeBio">Amanda Tugangui is an NYC-based actor, improv-er, and renaissance woman from California.
         </h1>
       </div>
-      <div class="col" v-bind:class="{ 'col-12': isMobile}" id="right">
+      <!--<div class="col" v-bind:class="{ 'col-12': isMobile}" id="right">
         <div class="container innerContainer">
           <div class="row innerRow" id="topPhotoRow">
             <v-lazy-image class="quads nonGalleryImage leftHeadshot" :src=largeBlue :src-placeholder=tinyBlue alt="Smiling Amanda Tugangui" />
@@ -17,6 +31,10 @@
             <v-lazy-image class="quads nonGalleryImage rightHeadshot" :src=largePurple :src-placeholder=tinyPurple alt="Laughing Amanda Tugangui" />
           </div>
         </div>
+      </div>-->
+      <div class="col">
+        <v-lazy-image class="nonGalleryImage" :src=portrait :src-placeholder=tinyHeadshot
+          alt="Amanda Tugangui's Main Headshot" />
       </div>
     </div>
   </div>
@@ -29,6 +47,7 @@ import largeBlue from "../assets/home/BlueHeadshot.jpg";
 import largeGreen from "../assets/home/GreenHeadshot.jpg";
 import largeTan from "../assets/home/TanHeadshot.jpg";
 import largePurple from "../assets/home/PurpleHeadshot.jpg";
+import portrait from "../assets/about/Portrait.jpg";
 
 import tinyBlue from "../assets/tiny/home/BlueHeadshot.jpg";
 import tinyGreen from "../assets/tiny/home/GreenHeadshot.jpg";
@@ -69,6 +88,9 @@ export default {
     },
     tinyPurple() {
       return tinyPurple;
+    },
+    portrait() {
+      return portrait;
     }
   },
   mounted() {

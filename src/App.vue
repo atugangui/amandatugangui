@@ -102,6 +102,7 @@ body {
   min-height: 100%;
   height: 100%;
   font-family: 'Jost', sans-serif;
+  background-color: #fff9e6;
 }
 
 #app {
@@ -119,6 +120,12 @@ body {
 
 #navbarSupportedContent {
   margin-left: auto;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .customBtnDesign {

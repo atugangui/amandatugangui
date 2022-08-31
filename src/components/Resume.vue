@@ -42,9 +42,9 @@
 import { BIconDownload } from 'bootstrap-vue'
 import VLazyImage from "v-lazy-image/v2"
 import largeResume from "../assets/resume/Resume.png"
-import largeHeadshot from "../assets/resume/MainHeadshot.jpg"
+import largeHeadshot from "../assets/resume/TanHeadshot.jpg"
 import tinyResume from "../assets/tiny/resume/Resume.png"
-import tinyHeadshot from "../assets/tiny/resume/MainHeadshot.jpg"
+import tinyHeadshot from "../assets/tiny/resume/TanHeadshot.jpg"
 
 
 export default {
@@ -91,12 +91,6 @@ export default {
 }
 
 .row {
-  height: 100%;
-}
-
-.col {
-  display: flex;
-  align-items: center;
   height: 100%;
 }
 
