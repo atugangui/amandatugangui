@@ -75,7 +75,7 @@ label {
   margin-right: auto;
   color: #42b983;
   opacity: .5;
-  background-color: white;
+  background-color: #fff9e6;
 }
 
 #submitBtn:hover{
