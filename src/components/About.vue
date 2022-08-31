@@ -64,7 +64,7 @@
 <script>
 import VLazyImage from "v-lazy-image/v2";
 
-import largePortrait from "../assets/about/Portrait.jpg";
+import largePortrait from "../assets/about/Me.png";
 import tinyPortrait from "../assets/tiny/about/Portrait.jpg";
 
 export default {

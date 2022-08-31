@@ -122,7 +122,7 @@ body {
 }
 
 .customBtnDesign {
-  border: solid rgb(250, 140, 107) 2px;
+  border: solid rgb(190, 153, 58) 2px;
   border-radius: 0px;
   padding-left: 30px;
   padding-right: 30px;

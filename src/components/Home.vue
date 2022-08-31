@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col" v-bind:class="{ 'col-12': isMobile}" id="left">
-        <img class="nonGalleryImage" id="smearPic" src="@/assets/home/PaintSmear.png" alt=null/>
+        <img class="nonGalleryImage" id="smearPic" src="@/assets/home/GreenCircle.png" alt=null/>
         <h1 class="homeBio">Amanda Tugangui is an NYC-based actor, improv-er, and renaissance woman from California.
         </h1>
       </div>
