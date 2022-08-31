@@ -41,9 +41,9 @@
 <script>
 import { BIconDownload } from 'bootstrap-vue'
 import VLazyImage from "v-lazy-image/v2"
-import largeResume from "../assets/resume/Resume.jpg"
+import largeResume from "../assets/resume/Resume.png"
 import largeHeadshot from "../assets/resume/MainHeadshot.jpg"
-import tinyResume from "../assets/tiny/resume/Resume.jpg"
+import tinyResume from "../assets/tiny/resume/Resume.png"
 import tinyHeadshot from "../assets/tiny/resume/MainHeadshot.jpg"
 
 
