@@ -13,14 +13,15 @@
         </div>
       </div>
     </template>
-    <div class="row">
-      <!--<div class="col" v-bind:class="{ 'col-12': isMobile}" id="left">-->
-      <div class="col" id="left">
-        <img class="nonGalleryImage" id="smearPic" src="@/assets/home/Circles.png" alt=null />
-        <h1 class="homeBio">Amanda Tugangui is an NYC-based actor, improv-er, and renaissance woman from California.
-        </h1>
-      </div>
-      <!--<div class="col" v-bind:class="{ 'col-12': isMobile}" id="right">
+    <template v-else>
+      <div class="row">
+        <!--<div class="col" v-bind:class="{ 'col-12': isMobile}" id="left">-->
+        <div class="col" id="left">
+          <img class="nonGalleryImage" id="smearPic" src="@/assets/home/Circles.png" alt=null />
+          <h1 class="homeBio">Amanda Tugangui is an NYC-based actor, improv-er, and renaissance woman from California.
+          </h1>
+        </div>
+        <!--<div class="col" v-bind:class="{ 'col-12': isMobile}" id="right">
         <div class="container innerContainer">
           <div class="row innerRow" id="topPhotoRow">
             <v-lazy-image class="quads nonGalleryImage leftHeadshot" :src=largeBlue :src-placeholder=tinyBlue alt="Smiling Amanda Tugangui" />
@@ -32,11 +33,12 @@
           </div>
         </div>
       </div>-->
-      <div class="col">
-        <v-lazy-image class="nonGalleryImage" :src=portrait :src-placeholder=tinyHeadshot
-          alt="Amanda Tugangui's Main Headshot" />
+        <div class="col">
+          <v-lazy-image class="nonGalleryImage" :src=portrait :src-placeholder=tinyHeadshot
+            alt="Amanda Tugangui's Main Headshot" />
+        </div>
       </div>
-    </div>
+    </template>
   </div>
 </template>
 
