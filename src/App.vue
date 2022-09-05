@@ -11,11 +11,11 @@
           </div>
         <!-- Navigation links (hidden by default) -->
         <div id="myLinks" v-bind:class="{ showList: !listIsHidden}">
-          <a class="hamburgerLink" v-on:click="view = 'home'" v-bind:class="{ active: view=='home' }">home</a>
-          <a class="hamburgerLink" v-on:click="view = 'gallery'" v-bind:class="{ active: view=='gallery'}">gallery</a>
-          <a class="hamburgerLink" v-on:click="view = 'resume'" v-bind:class="{ active: view=='resume' }">resume</a>
-          <a class="hamburgerLink" v-on:click="view = 'about'" v-bind:class="{ hactive: view=='about' }">about</a>
-          <a class="hamburgerLink" v-on:click="view = 'contact'" v-bind:class="{ active: view=='contact' }">contact</a>
+          <a class="hamburgerLink" v-on:click="view = 'home'; listIsHidden= !listIsHidden" v-bind:class="{ active: view=='home' }">home</a>
+          <a class="hamburgerLink" v-on:click="view = 'gallery'; listIsHidden= !listIsHidden" v-bind:class="{ active: view=='gallery'}">gallery</a>
+          <a class="hamburgerLink" v-on:click="view = 'resume'; listIsHidden= !listIsHidden" v-bind:class="{ active: view=='resume' }">resume</a>
+          <a class="hamburgerLink" v-on:click="view = 'about'; listIsHidden= !listIsHidden" v-bind:class="{ hactive: view=='about' }">about</a>
+          <a class="hamburgerLink" v-on:click="view = 'contact'; listIsHidden= !listIsHidden" v-bind:class="{ active: view=='contact' }">contact</a>
         </div>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
         
