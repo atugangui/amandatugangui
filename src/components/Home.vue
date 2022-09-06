@@ -3,11 +3,11 @@
     <template v-if="isMobile">
       <div class="row">
         <div class="col-12" style="height:50%">
-          <v-lazy-image class="nonGalleryImage" :src=portrait :src-placeholder=tinyHeadshot
-            alt="Amanda Tugangui's Main Headshot" />
+          <v-lazy-image class="nonGalleryImage" :src=portrait :src-placeholder=tinyPortrait
+            alt="Amanda Tugangui's Portrait" />
         </div>
         <div class="col-12" id="left" style="height:50%">
-          <img class="nonGalleryImage" id="smearPic" src="@/assets/home/Circles.png" alt=null />
+          <img class="nonGalleryImage" id="greenGoldCircles" src="@/assets/home/Circles.png" alt=null />
           <h1 class="homeBio">Amanda Tugangui is an NYC-based actor, improv-er, and renaissance woman from California.
           </h1>
         </div>
@@ -15,27 +15,14 @@
     </template>
     <template v-else>
       <div class="row">
-        <!--<div class="col" v-bind:class="{ 'col-12': isMobile}" id="left">-->
         <div class="col" id="left">
-          <img class="nonGalleryImage" id="smearPic" src="@/assets/home/Circles.png" alt=null />
+          <img class="nonGalleryImage" id="greenGoldCircles" src="@/assets/home/Circles.png" alt=null />
           <h1 class="homeBio">Amanda Tugangui is an NYC-based actor, improv-er, and renaissance woman from California.
           </h1>
         </div>
-        <!--<div class="col" v-bind:class="{ 'col-12': isMobile}" id="right">
-        <div class="container innerContainer">
-          <div class="row innerRow" id="topPhotoRow">
-            <v-lazy-image class="quads nonGalleryImage leftHeadshot" :src=largeBlue :src-placeholder=tinyBlue alt="Smiling Amanda Tugangui" />
-            <v-lazy-image class="quads nonGalleryImage rightHeadshot" :src=largeGreen :src-placeholder=tinyGreen alt="Smirking Amanda Tugangui" />
-          </div>
-          <div class="row innerRow">
-            <v-lazy-image class="quads nonGalleryImage leftHeadshot" :src=largeTan :src-placeholder=tinyTan alt="Dramatic Amanda Tugangui"/>
-            <v-lazy-image class="quads nonGalleryImage rightHeadshot" :src=largePurple :src-placeholder=tinyPurple alt="Laughing Amanda Tugangui" />
-          </div>
-        </div>
-      </div>-->
         <div class="col">
-          <v-lazy-image class="nonGalleryImage" :src=portrait :src-placeholder=tinyHeadshot
-            alt="Amanda Tugangui's Main Headshot" />
+          <v-lazy-image class="nonGalleryImage" :src=portrait :src-placeholder=tinyPortrait
+            alt="Amanda Tugangui's Portrait" />
         </div>
       </div>
     </template>
@@ -45,16 +32,8 @@
 <script>
 import VLazyImage from "v-lazy-image/v2";
 
-import largeBlue from "../assets/home/BlueHeadshot.jpg";
-import largeGreen from "../assets/home/GreenHeadshot.jpg";
-import largeTan from "../assets/home/TanHeadshot.jpg";
-import largePurple from "../assets/home/PurpleHeadshot.jpg";
-import portrait from "../assets/about/Portrait.jpg";
-
-import tinyBlue from "../assets/tiny/home/BlueHeadshot.jpg";
-import tinyGreen from "../assets/tiny/home/GreenHeadshot.jpg";
-import tinyTan from "../assets/tiny/home/TanHeadshot.jpg";
-import tinyPurple from "../assets/tiny/home/PurpleHeadshot.jpg";
+import portrait from "../assets/home/Portrait.jpg";
+import tinyPortrait from "../assets/tiny/home/Portrait.jpg";
 
 export default {
   name: 'Home',
@@ -67,32 +46,11 @@ export default {
     }
   },
   computed: {
-    largeBlue() {
-      return largeBlue;
-    },
-    largeGreen() {
-      return largeGreen;
-    },
-    largeTan() {
-      return largeTan;
-    },
-    largePurple() {
-      return largePurple;
-    },
-    tinyBlue() {
-      return tinyBlue;
-    },
-    tinyGreen() {
-      return tinyGreen;
-    },
-    tinyTan() {
-      return tinyTan;
-    },
-    tinyPurple() {
-      return tinyPurple;
-    },
     portrait() {
       return portrait;
+    },
+    tinyPortrait() {
+      return tinyPortrait;
     }
   },
   mounted() {
@@ -138,7 +96,7 @@ export default {
   position: absolute;
 }
 
-#smearPic {
+#greenGoldCircles {
   z-index: 0;
 }
 

@@ -25,14 +25,14 @@
           </p>
         </div>
         <div class="col-12">
-          <v-lazy-image class="nonGalleryImage" :src=largePortrait :src-placeholder=tinyPortrait
-            alt="Candid Amanda Tugangui" />
+          <v-lazy-image class="nonGalleryImage" :src=polaroid :src-placeholder=tinyPolaroid
+            alt="Amanda Tugangui Polaroid picture" />
         </div>
       </template>
       <template v-else>
         <div class="col">
-          <v-lazy-image class="nonGalleryImage" :src=largePortrait :src-placeholder=tinyPortrait
-            alt="Candid Amanda Tugangui" />
+          <v-lazy-image class="nonGalleryImage" :src=polaroid :src-placeholder=tinyPolaroid
+            alt="Amanda Tugangui Polaroid picture" />
         </div>
         <div class="col">
           <p id="bio">
@@ -64,8 +64,8 @@
 <script>
 import VLazyImage from "v-lazy-image/v2";
 
-import largePortrait from "../assets/about/Me.png";
-import tinyPortrait from "../assets/tiny/about/Portrait.jpg";
+import polaroid from "../assets/about/Polaroid.png";
+import tinyPolaroid from "../assets/tiny/about/Polaroid.png";
 
 export default {
   name: 'About',
@@ -78,11 +78,11 @@ export default {
     }
   },
   computed: {
-    largePortrait() {
-      return largePortrait;
+    polaroid() {
+      return polaroid;
     },
-    tinyPortrait() {
-      return tinyPortrait;
+    tinyPolaroid() {
+      return tinyPolaroid;
     }
   },
   mounted() {
