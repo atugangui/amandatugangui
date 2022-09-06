@@ -3,7 +3,7 @@
     <stack :column-min-width="300" :gutter-width="15" :gutter-height="15" monitor-images-loaded>
       <StackItem v-for="(item, i) in items" :key="i">
         <template v-if="item.mediaType == 2">
-          <iframe :src="item.imgSrc">
+          <iframe width="560" height="315" :src="item.imgSrc" title="YouTube video player" frameborder="0" >
           </iframe>
           </template>
           <template v-else>
