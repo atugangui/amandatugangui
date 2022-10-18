@@ -4,7 +4,7 @@
       <template v-if="isMobile">
       <div class="col-12">
           <p id="bio">
-            Onstage, Amanda brings an intensity and freshness to everything she performs in, whether it be a Greek classic or 
+            Onstage, Amanda brings an intensity and freshness to everything she performs in, whether it be a Greek tragedy or 
             an underground comedy show.
             <br/>
             <br/>
@@ -35,7 +35,7 @@
         </div>
         <div class="col">
           <p id="bio">
-            Onstage, Amanda brings an intensity and freshness to everything she performs in, whether it be a Greek classic or 
+            Onstage, Amanda brings an intensity and freshness to everything she performs in, whether it be a Greek tragedy or 
             an underground comedy show.
             <br/>
             <br/>

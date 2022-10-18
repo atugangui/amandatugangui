@@ -15,6 +15,8 @@
           <a class="hamburgerLink" v-on:click="view = 'gallery'; listIsHidden= !listIsHidden" v-bind:class="{ active: view=='gallery'}">gallery</a>
           <a class="hamburgerLink" v-on:click="view = 'resume'; listIsHidden= !listIsHidden" v-bind:class="{ active: view=='resume' }">resume</a>
           <a class="hamburgerLink" v-on:click="view = 'about'; listIsHidden= !listIsHidden" v-bind:class="{ hactive: view=='about' }">about</a>
+          <a class="hamburgerLink" href="https://www.youtube.com/c/AmandaJeanT/">youtube</a>
+          <a class="hamburgerLink" href="https://www.instagram.com/amandatugangui/">instagram</a>
           <a class="hamburgerLink" v-on:click="view = 'contact'; listIsHidden= !listIsHidden" v-bind:class="{ active: view=='contact' }">contact</a>
         </div>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
@@ -23,6 +25,20 @@
     </template>
     <template v-else>
       <nav class="navbar navbar-expand-lg navbar-light">
+        <div id="navbarSupportedContent" class="navbarSupportedContentSocMed">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.youtube.com/c/AmandaJeanT/"  target="_blank">
+                <img class="socialmediaicons" src="@/assets/youtube.png">
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.instagram.com/amandatugangui/"  target="_blank">
+                <img class="socialmediaicons" src="@/assets/instagram.png">
+              </a>
+            </li>
+          </ul>
+        </div>
         <div id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item" v-bind:class="{ active: view == 'home' }">
@@ -120,6 +136,15 @@ body {
 
 #navbarSupportedContent {
   margin-left: auto;
+}
+
+.navbarSupportedContentSocMed {
+  margin-right: auto;
+  margin-left: unset !important;
+}
+
+.socialmediaicons {
+  width: 40px;
 }
 
 .col {
