@@ -64,7 +64,7 @@ export default {
             largeImg: largeSweeney,
             tinyImg: tinySweeney,
             mediaType: 1
-          },
+          },/*
           {
             showName: 'HEART OF GOD',
             imgSrc: 'https://www.youtube.com/embed/qbPxZPsjhbg',
@@ -76,6 +76,14 @@ export default {
           {
             showName: "DENNY'S",
             imgSrc: 'https://www.youtube.com/embed/4JU76lgOYbo',
+            prodCo: 'd. Director Name',
+            largeImg: null,
+            tinyImg: null,
+            mediaType: 2
+          },*/
+          {
+            showName: "REEL",
+            imgSrc: 'https://www.youtube.com/embed/uk3mXjT6UUM',
             prodCo: 'd. Director Name',
             largeImg: null,
             tinyImg: null,
