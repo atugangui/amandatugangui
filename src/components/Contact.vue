@@ -1,84 +1,115 @@
-<template>
+<template v-if="isMobile">
   <div class="container">
-    <h1>contact</h1>
-    <form @submit.prevent="sendEmail">
-      <div class="row justify-content-md-center">
-        <div class="col-md-auto">
-          <label>name</label>
-          <input type="text" v-model="name" name="name" placeholder="your name">
+    <div class="row">
+      <template v-if="isMobile">
+      <div class="col-12">
+          <p id="contactInfo">
+            Gill Talent Group
+            <br/>
+            <br/>
+            NYC Agent: Gabrielle Holder
+            <br/>Gabrielle@gilltalent.com
+            <br/>
+            <br/>
+            42 Broadway, 12 FL Suite 106
+            <br/>New York City, New York 10004
+            <br/>Tel 646.889.1234, Fax 888.451.3748
+          </p>
         </div>
-      </div>
-      <div class="row justify-content-md-center">
-        <div class="col-md-auto">
-          <label>email</label>
-          <input type="email" v-model="email" name="email" placeholder="your email">
+        <div class="col-12">
+          <v-lazy-image class="nonGalleryImage" :src=gtg :src-placeholder=tinyGtg
+            alt="Gill Talent Group" />
         </div>
-      </div>
-      <div class="row justify-content-md-center">
-        <div class="col-md-auto">
-          <label>message</label>
-          <textarea name="message" v-model="message" cols="30" rows="5" placeholder="message">
-          </textarea>
-          <input class="customBtnDesign" id="submitBtn" type="submit" value="send">
+      </template>
+      <template v-else>
+        <div class="col">
+          <v-lazy-image class="nonGalleryImage" :src=gtg :src-placeholder=tinyGtg
+            alt="Gill Talent Group" />
         </div>
-      </div>
-    </form>
+        <div class="col">
+          <p id="contactInfo">
+            Gill Talent Group
+            <br/>
+            <br/>
+            NYC Agent: Gabrielle Holder
+            <br/>Gabrielle@gilltalent.com
+            <br/>
+            <br/>
+            42 Broadway, 12 FL Suite 106
+            <br/>New York City, New York 10004
+            <br/>Tel 646.889.1234, Fax 888.451.3748
+          </p>
+        </div>
+      </template>
+    </div>
   </div>
 </template>
 
 <script>
-import emailjs from 'emailjs-com';
+import VLazyImage from "v-lazy-image/v2";
+
+import gtg from "../assets/contact/GillTalentGroup.jpg";
+import tinyGtg from "../assets/tiny/contact/GillTalentGroup.jpg";
 
 export default {
-  name: 'Contact',
+  name: 'About',
+  components: {
+    VLazyImage
+  },
   data() {
     return {
-      name: '',
-      email: '',
-      message: ''
+      isMobile: false
     }
   },
-  methods: {
-    sendEmail(e) {
-      try {
-        // TO DO: ADD VARIABLES AS GITHUB KEYS
-        emailjs.sendForm(process.env.VUE_APP_SERVICE_ID, process.env.VUE_APP_TEMPLATE_ID, e.target,
-          process.env.VUE_APP_USER_ID, {
-          name: this.name,
-          email: this.email,
-          message: this.message
-        })
-
-      } catch (error) {
-        console.log({ error })
-      }
-      // Reset form field
-      this.name = ''
-      this.email = ''
-      this.message = ''
+  computed: {
+    gtg() {
+      return gtg;
     },
+    tinyGtg() {
+      return tinyGtg;
+    }
+  },
+  mounted() {
+    this.onResize()
+    window.addEventListener('resize', this.onResize, { passive: true })
+  },
+  methods: {
+    onResize() {
+      this.isMobile = window.innerWidth < 900
+    }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-label {
-  display: block;
-  margin: 20px;
+.container {
+  height: 90%;
 }
 
-#submitBtn {
-  display: block;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #42b983;
-  opacity: .5;
-  background-color: #fff9e6;
+.row {
+  height: 100%;
 }
 
-#submitBtn:hover{
-  opacity: 1;
+.italic {
+  font-style: italic;
+}
+
+#contactInfo {
+  text-align: right;
+  width: 70%;
+}
+
+@media (min-width: 1366px) {
+  #contactInfo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  #contactInfo {
+    width: 100%;
+    text-align: center;
+  }
 }
 </style>
