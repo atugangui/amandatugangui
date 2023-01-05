@@ -28,6 +28,7 @@
 import { Stack, StackItem } from 'vue-stack-grid';
 import VLazyImage from "v-lazy-image/v2";
 
+import largeBIMYOT from "../assets/gallery/BIMYOT.jpg";
 import largeSweeney from "../assets/gallery/SweeneyTodd.jpg";
 import largeLove from "../assets/gallery/LoveAndInformation.jpg";
 import largeWedding from "../assets/gallery/AvenueQ.jpg";
@@ -35,6 +36,7 @@ import largeWait from "../assets/gallery/WaitUntilDark.jpg";
 import largeAntigonick from "../assets/gallery/Antigonick.jpg";
 import largeSweeney2 from "../assets/gallery/SweeneyToddClose.jpg";
 
+import tinyBIMYOT from "../assets/tiny/gallery/BIMYOT.jpg";
 import tinySweeney from "../assets/tiny/gallery/SweeneyTodd.jpg";
 import tinyLove from "../assets/tiny/gallery/LoveAndInformation.jpg";
 import tinyWedding from "../assets/tiny/gallery/AvenueQ.jpg";
@@ -57,14 +59,50 @@ export default {
     return {
       currentImageHovered: null,
       items: [
+      {
+            showName: "BUT I MET YOU ON TV",
+            imgSrc: 'BIMYOT',
+            prodCo: 'Two Bimbos',
+            largeImg: largeBIMYOT,
+            tinyImg: tinyBIMYOT,
+            mediaType: 1
+          },
           {
+            showName: "REEL",
+            imgSrc: 'https://www.youtube.com/embed/uk3mXjT6UUM',
+            prodCo: 'd. Director Name',
+            largeImg: null,
+            tinyImg: null,
+            mediaType: 2
+          },
+          
+      {
             showName: "SWEENEY TODD",
             imgSrc: 'SweeneyTodd',
             prodCo: 'Lewis & Clark College',
             largeImg: largeSweeney,
             tinyImg: tinySweeney,
             mediaType: 1
-          },/*
+          },
+          
+          {
+            showName: "AVENUE Q",
+            imgSrc: 'aveQWedding',
+            prodCo: 'The Hollywood Majestic',
+            largeImg: largeWedding,
+            tinyImg: tinyWedding,
+            mediaType: 1
+          },
+      {
+            showName: 'WAIT UNTIL DARK',
+            imgSrc: 'WaitUntilDark',
+            prodCo: 'Theatre Palisades',
+            largeImg: largeWait,
+            tinyImg: tinyWait,
+            mediaType: 1
+          },
+          
+          /*
           {
             showName: 'HEART OF GOD',
             imgSrc: 'https://www.youtube.com/embed/qbPxZPsjhbg',
@@ -81,22 +119,16 @@ export default {
             tinyImg: null,
             mediaType: 2
           },*/
+          
           {
-            showName: "REEL",
-            imgSrc: 'https://www.youtube.com/embed/uk3mXjT6UUM',
-            prodCo: 'd. Director Name',
-            largeImg: null,
-            tinyImg: null,
-            mediaType: 2
-          },
-          {
-            showName: "AVENUE Q",
-            imgSrc: 'aveQWedding',
-            prodCo: 'The Hollywood Majestic',
-            largeImg: largeWedding,
-            tinyImg: tinyWedding,
+            showName: "ANTIGONICK",
+            imgSrc: 'Antigonick',
+            prodCo: 'Lewis & Clark College',
+            largeImg: largeAntigonick,
+            tinyImg: tinyAntigonick,
             mediaType: 1
           },
+          
           {
             showName: "LOVE AND INFORMATION",
             imgSrc: 'LoveAndInfo',
@@ -106,29 +138,13 @@ export default {
             mediaType: 1
           },
           {
-            showName: 'WAIT UNTIL DARK',
-            imgSrc: 'WaitUntilDark',
-            prodCo: 'Theatre Palisades',
-            largeImg: largeWait,
-            tinyImg: tinyWait,
-            mediaType: 1
-          },
-          {
-            showName: "ANTIGONICK",
-            imgSrc: 'Antigonick',
-            prodCo: 'Lewis & Clark College',
-            largeImg: largeAntigonick,
-            tinyImg: tinyAntigonick,
-            mediaType: 1
-          },
-          {
             showName: 'SWEENEY TODD',
             imgSrc: 'SweeneyToddClose',
             prodCo: 'Lewis & Clark College',
             largeImg: largeSweeney2,
             tinyImg: tinySweeney2,
             mediaType: 1
-          }
+          },
       ]
     }
   }
