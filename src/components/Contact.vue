@@ -9,11 +9,12 @@
             <br/>
             NYC Agent: Gabrielle Holder
             <br/>Gabrielle@gilltalent.com
+            <br/>Tel 646.889.1234
             <br/>
             <br/>
-            42 Broadway, 12 FL Suite 106
-            <br/>New York City, New York 10004
-            <br/>Tel 646.889.1234, Fax 888.451.3748
+            LA Agent: Désirée DaCosta
+            <br/>Desiree@gilltalent.com
+            <br/>Tel 310.628.9244
           </p>
         </div>
         <div class="col-12">
@@ -33,11 +34,12 @@
             <br/>
             NYC Agent: Gabrielle Holder
             <br/>Gabrielle@gilltalent.com
+            <br/>Tel 646.889.1234
             <br/>
             <br/>
-            42 Broadway, 12 FL Suite 106
-            <br/>New York City, New York 10004
-            <br/>Tel 646.889.1234, Fax 888.451.3748
+            LA Agent: Désirée DaCosta
+            <br/>Desiree@gilltalent.com
+            <br/>Tel 310.628.9244
           </p>
         </div>
       </template>

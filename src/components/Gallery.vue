@@ -3,19 +3,15 @@
     <stack :column-min-width="300" :gutter-width="15" :gutter-height="15" monitor-images-loaded>
       <StackItem v-for="(item, i) in items" :key="i">
         <template v-if="item.mediaType == 2">
-          <iframe width="560" height="315" :src="item.imgSrc" title="YouTube video player" frameborder="0" >
+          <iframe width="560" height="315" :src="item.imgSrc" title="YouTube video player" frameborder="0">
           </iframe>
-          </template>
-          <template v-else>
-          <v-lazy-image
-            class="galleryImages"
-            :src=getLargeImgUrl(item)
-            :src-placeholder=getTinyImgUrl(item)
-            v-bind:alt="item.showName"
-          />
-          <p class="prodNameOnPic">{{item.showName}}</p>
-          </template>
-          <!--<br/><span class="prodCoText">{{item.prodCo}}</span>-->
+        </template>
+        <template v-else>
+          <v-lazy-image class="galleryImages" :src=getLargeImgUrl(item) :src-placeholder=getTinyImgUrl(item)
+            v-bind:alt="item.showName" />
+          <p class="prodNameOnPic">{{ item.showName }}</p>
+        </template>
+        <!--<br/><span class="prodCoText">{{item.prodCo}}</span>-->
       </StackItem>
       <StackItem>
 
@@ -51,7 +47,7 @@ export default {
     getLargeImgUrl(item) {
       return item.largeImg;
     },
-    getTinyImgUrl(item){
+    getTinyImgUrl(item) {
       return item.tinyImg;
     }
   },
@@ -59,14 +55,23 @@ export default {
     return {
       currentImageHovered: null,
       items: [
-      {
-            showName: "BUT I MET YOU ON TV",
-            imgSrc: 'BIMYOT',
-            prodCo: 'Two Bimbos',
-            largeImg: largeBIMYOT,
-            tinyImg: tinyBIMYOT,
-            mediaType: 1
-          },
+        {
+          showName: "BUT I MET YOU ON TV",
+          imgSrc: 'BIMYOT',
+          prodCo: 'Two Bimbos',
+          largeImg: largeBIMYOT,
+          tinyImg: tinyBIMYOT,
+          mediaType: 1
+        },
+
+        {
+          showName: 'HEART OF GOD',
+          imgSrc: 'https://www.youtube.com/embed/qbPxZPsjhbg',
+          prodCo: 'd. Director Name',
+          largeImg: null,
+          tinyImg: null,
+          mediaType: 2
+        },/*
           {
             showName: "REEL",
             imgSrc: 'https://www.youtube.com/embed/uk3mXjT6UUM',
@@ -74,77 +79,64 @@ export default {
             largeImg: null,
             tinyImg: null,
             mediaType: 2
-          },
-          
-      {
-            showName: "SWEENEY TODD",
-            imgSrc: 'SweeneyTodd',
-            prodCo: 'Lewis & Clark College',
-            largeImg: largeSweeney,
-            tinyImg: tinySweeney,
-            mediaType: 1
-          },
-          
-          {
-            showName: "AVENUE Q",
-            imgSrc: 'aveQWedding',
-            prodCo: 'The Hollywood Majestic',
-            largeImg: largeWedding,
-            tinyImg: tinyWedding,
-            mediaType: 1
-          },
-      {
-            showName: 'WAIT UNTIL DARK',
-            imgSrc: 'WaitUntilDark',
-            prodCo: 'Theatre Palisades',
-            largeImg: largeWait,
-            tinyImg: tinyWait,
-            mediaType: 1
-          },
-          
-          /*
-          {
-            showName: 'HEART OF GOD',
-            imgSrc: 'https://www.youtube.com/embed/qbPxZPsjhbg',
-            prodCo: 'd. Director Name',
-            largeImg: null,
-            tinyImg: null,
-            mediaType: 2
-          },
-          {
-            showName: "DENNY'S",
-            imgSrc: 'https://www.youtube.com/embed/4JU76lgOYbo',
-            prodCo: 'd. Director Name',
-            largeImg: null,
-            tinyImg: null,
-            mediaType: 2
           },*/
-          
-          {
-            showName: "ANTIGONICK",
-            imgSrc: 'Antigonick',
-            prodCo: 'Lewis & Clark College',
-            largeImg: largeAntigonick,
-            tinyImg: tinyAntigonick,
-            mediaType: 1
-          },
-          
-          {
-            showName: "LOVE AND INFORMATION",
-            imgSrc: 'LoveAndInfo',
-            prodCo: 'Lewis & Clark College',
-            largeImg: largeLove,
-            tinyImg: tinyLove,
-            mediaType: 1
-          },
-          {
-            showName: 'SWEENEY TODD',
-            imgSrc: 'SweeneyToddClose',
-            prodCo: 'Lewis & Clark College',
-            largeImg: largeSweeney2,
-            tinyImg: tinySweeney2,
-            mediaType: 1
-          },
+        {
+          showName: "SWEENEY TODD",
+          imgSrc: 'SweeneyTodd',
+          prodCo: 'Lewis & Clark College',
+          largeImg: largeSweeney,
+          tinyImg: tinySweeney,
+          mediaType: 1
+        },
+        {
+          showName: "DENNY'S",
+          imgSrc: 'https://www.youtube.com/embed/w9Xeoz9PTtM',
+          prodCo: 'd. Director Name',
+          largeImg: null,
+          tinyImg: null,
+          mediaType: 2
+        },
+        {
+          showName: "AVENUE Q",
+          imgSrc: 'aveQWedding',
+          prodCo: 'The Hollywood Majestic',
+          largeImg: largeWedding,
+          tinyImg: tinyWedding,
+          mediaType: 1
+        },
+        {
+          showName: 'WAIT UNTIL DARK',
+          imgSrc: 'WaitUntilDark',
+          prodCo: 'Theatre Palisades',
+          largeImg: largeWait,
+          tinyImg: tinyWait,
+          mediaType: 1
+        },
+        {
+          showName: "ANTIGONICK",
+          imgSrc: 'Antigonick',
+          prodCo: 'Lewis & Clark College',
+          largeImg: largeAntigonick,
+          tinyImg: tinyAntigonick,
+          mediaType: 1
+        },
+
+        {
+          showName: "LOVE AND INFORMATION",
+          imgSrc: 'LoveAndInfo',
+          prodCo: 'Lewis & Clark College',
+          largeImg: largeLove,
+          tinyImg: tinyLove,
+          mediaType: 1
+        },
+        {
+          showName: 'SWEENEY TODD',
+          imgSrc: 'SweeneyToddClose',
+          prodCo: 'Lewis & Clark College',
+          largeImg: largeSweeney2,
+          tinyImg: tinySweeney2,
+          mediaType: 1
+        },
       ]
     }
   }
@@ -177,7 +169,7 @@ iframe {
   color: white;
 }
 
-.prodCoText{
+.prodCoText {
   font-style: italic;
 }
 
