@@ -11,10 +11,7 @@ jobs:
       with:
         username: 'atugangui'
         reponame: 'amandatugangui'
-        token: ${{ secrets.GITHUB_TOKEN }}
-      env:
-        VUE_APP_SERVICE_ID: ${{ secrets.SERVICE_ID }}
-        VUE_APP_TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
+        token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
 #        VUE_APP_USER_ID: ${{ secrets.USER_ID }}
 #  sitemap_job:
 #    runs-on: ubuntu-latest
